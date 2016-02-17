@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "builder",
-    "build-js": "rollup -f umd -n Observable index.js -o dist/observable.js",
+    "build-js": "rollup -f umd -n Observable src/bundle.js -o dist/observable.js",
     "uglify-js": "uglifyjs dist/observable.js -cmo dist/observable.min.js"
   },
   "builder": {
