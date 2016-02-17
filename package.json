@@ -1,0 +1,44 @@
+{
+  "name": "@pakastin/observable",
+  "version": "0.0.1",
+  "description": "simple Observable",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "builder",
+    "build-js": "rollup -f iife -n Observable index.js -o dist/observable.js",
+    "uglify-js": "uglifyjs dist/observable.js -cmo dist/observable.min.js"
+  },
+  "builder": {
+    "exec": [
+      "build-js",
+      "uglify-js"
+    ],
+    "watch": {
+      "index.js": [
+        "build-js",
+        "uglify-js"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pakastin/observable.git"
+  },
+  "keywords": [
+    "observable"
+  ],
+  "author": "Juha Lindstedt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pakastin/observable/issues"
+  },
+  "homepage": "https://github.com/pakastin/observable#readme",
+  "devDependencies": {
+    "@pakastin/builder": "0.0.1",
+    "rollup": "~0.25.4",
+    "uglify-js": "~2.6.1"
+  }
+}
