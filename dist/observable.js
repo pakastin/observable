@@ -4,8 +4,19 @@
   (global.Observable = factory());
 }(this, function () { 'use strict';
 
-  function Observable () {
-    this.listeners = {};
+  function Observable (obj) {
+    if (!(this instanceof Observable)) {
+      return new Observable(obj);
+    };
+    Object.defineProperty(this, 'listeners', {
+      value: {},
+      writable: true
+    });
+    if (obj) {
+      for (var key in obj) {
+        this[key] = obj[key];
+      }
+    }
   }
 
   Observable.prototype.on = on(false);
