@@ -1,6 +1,6 @@
 {
   "name": "@pakastin/observable",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "simple Observable",
   "main": "index.js",
   "directories": {
