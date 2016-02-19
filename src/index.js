@@ -18,6 +18,8 @@ export function Observable (obj) {
   }
 }
 
+export var observable = Observable;
+
 Observable.prototype.on = on(false);
 Observable.prototype.one = on(true);
 Observable.prototype.off = off;
