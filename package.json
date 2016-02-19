@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "builder",
     "build-js": "rollup -f umd -n Observable src/bundle.js -o dist/observable.js",
-    "uglify-js": "uglifyjs dist/observable.js -cmo dist/observable.min.js"
+    "uglify-js": "uglifyjs dist/observable.js -cmo dist/observable.min.js",
+    "postpublish": "git push origin --tags"
   },
   "builder": {
     "exec": [
