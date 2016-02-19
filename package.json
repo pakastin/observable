@@ -17,7 +17,7 @@
       "uglify-js"
     ],
     "watch": {
-      "index.js": [
+      "src/**/*.js": [
         "build-js",
         "uglify-js"
       ]
